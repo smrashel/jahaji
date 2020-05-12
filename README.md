@@ -49,7 +49,7 @@ admin, ghat, jahaji, manager, vessel, viewer
 Import District, GoodsType, MobileMoneyAccount, Position, Thana, VesselType data using admin site.
 
 ## Team
-* [smrashel](https://github.com/smrashel)
+* [smrashel](https://smrashel.github.io/portfolio/)
 
 ## FAQ
 * Please ask me if you have any questions regarding the project.
@@ -58,4 +58,4 @@ Import District, GoodsType, MobileMoneyAccount, Position, Thana, VesselType data
 * Please support me.
 
 ## License
-* Copyright 2020 © [smrashel](https://github.com/smrashel)
+* Copyright 2020 © [smrashel](https://smrashel.github.io/portfolio/)
