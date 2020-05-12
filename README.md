@@ -1,3 +1,8 @@
+# Jahaji Data Site
+
+This is an application to help interested parties to store and retrieve Bangladeshi shipping crew data.
+ 
+
 Clone the application:
 git clone https://github.com/smrashel/jahaji.git
 
