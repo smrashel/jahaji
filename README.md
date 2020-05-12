@@ -1,4 +1,4 @@
-# Jahaji Data Site
+# Jahaji Data
 
 This is an application to help interested parties to store and retrieve Bangladeshi shipping crew data.
 
@@ -49,7 +49,7 @@ admin, ghat, jahaji, manager, vessel, viewer
 Import District, GoodsType, MobileMoneyAccount, Position, Thana, VesselType data using admin site.
 
 ## Team
-* [smrashel](github.com/smrashel)
+* [smrashel](https://github.com/smrashel)
 
 ## FAQ
 * Please ask me if you have any questions regarding the project.
@@ -58,4 +58,4 @@ Import District, GoodsType, MobileMoneyAccount, Position, Thana, VesselType data
 * Please support me.
 
 ## License
-* Copyright 2020 © [smrashel](github.com/smrashel)
+* Copyright 2020 © [smrashel](https://github.com/smrashel)
