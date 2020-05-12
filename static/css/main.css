@@ -1,0 +1,34 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+body {
+    margin-bottom: 40px; /* Margin bottom by footer height */
+    font-family: "segoe-ui", "open-sans", tahoma, arial;
+    font-size: 15px;
+  }
+/* Navigation styles*/
+  .navbar-nav >li >a,
+  .navbar-brand {
+  color: #f8f9fa;
+  padding-top: 5px !important; padding-bottom: 10px !important; height: 30px;
+  }
+.navbar {min-height: 30px !important;}
+
+.dropdown-menu a :hover {
+      background-color: #343a40;
+  }
+
+.dropdown:hover .dropdown-menu {
+      display: block;
+  }
+
+/* Footer Style */
+#footer {
+    color: #f8f9fa;
+    background-color: #343a40;    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Set the fixed height of the footer here */
+    line-height: 40px; /* Vertically center the text there */
+}

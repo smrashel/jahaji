@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jahaji</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- jQuery CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <!-- DataTables Plugin CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <!-- Fengyuan Chen's Datepicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/seafarer_details.css' %}">
+
+</head>
+<body>
+
+    {% include 'crewdatabd/navbar.html' %}
+    <div id="container" class="container">
+        <div id="main">
+            {% block content %}
+
+
+            {% endblock %}
+        </div>
+    </div>
+    <br>
+    {% include 'crewdatabd/footer.html' %}
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--DataTable Plugin javascript-->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<!-- Fengyuan Chen's Datepicker -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+<script src="{% static '/js/main.js' %}"></script>
+
+<script>
+$(document).ready( function () {
+    $('#company').DataTable();
+    $('#ship').DataTable();
+    $('#seafarer').DataTable();
+} );
+</script>
+
+<script>
+  $(function () {
+    $("#id_birth_date").datepicker({
+      format:'yyyy-m-d',
+    });
+  });
+</script>
+
+<script>
+    $("#id_district").change(function () {
+      var url = $("#myForm").attr("data-thanas-url");
+      var districtId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'district': districtId
+        },
+        success: function (data) {
+          $("#id_thana").html(data);
+        }
+      });
+
+    });
+</script>
+
+<script>
+    $("#id_ghat_district").change(function () {
+      var url = $("#laborForm").attr("data-thanas-url");
+      var districtId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'district': districtId
+        },
+        success: function (data) {
+          $("#id_ghat_thana").html(data);
+        }
+      });
+
+    });
+</script>
+
+<script>
+    $("#id_address_district").change(function () {
+      var url = $("#laborForm").attr("data-thanas-url");
+      var districtId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'district': districtId
+        },
+        success: function (data) {
+          $("#id_address_thana").html(data);
+        }
+      });
+
+    });
+</script>
+
+<script>
+    $("#id_ghat_thana").change(function () {
+      var url = $("#laborForm").attr("data-ghats-url");
+      var thanaId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'thana': thanaId
+        },
+        success: function (data) {
+          $("#id_ghat_name").html(data);
+        }
+      });
+
+    });
+</script>
+
+<script>
+    $("#id_company").change(function () {
+      var url = $("#myForm").attr("data-vessels-url");
+      var companyId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'company': companyId
+        },
+        success: function (data) {
+          $("#id_vessel").html(data);
+        }
+      });
+
+    });
+</script>
+
+</html>

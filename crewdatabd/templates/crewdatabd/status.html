@@ -1,0 +1,91 @@
+
+<div class="row">
+    <div class="col-sm">
+        <div class="card text-center">
+            <div class="card-header">
+                <h5 class="card-title">{{company_count.member_count}} COMPANIES</h5>
+            </div>
+            <div class="card-body text-center bg-info">
+              <h5 class="card-title">{{ship_count}} Vessels</h5>
+              <h5 class="card-title">{{shipping_staff.staff_count}} Staffs</h5>
+                <br>
+            </div>
+            <div class="card-body text-center bg-info">
+              <h5 class="card-title">{{association.acount}} Associations</h5>
+              <h5 class="card-title">{{ghat.ghat_count}} Ghats</h5>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="card text-center">
+            <div class="card-header">
+                <h5 class="card-title">{{ship_count}} VESSELS</h5>
+            </div>
+          <div class="card-body text-center bg-info">
+              {% for vessel_staff in vessel_staffs%}
+
+                <h5 class="card-title">{{vessel_staff.vessel_count}} {{vessel_staff.vessel_type}} Ships:
+                    {{vessel_staff.staff_count}} Staff</h5>
+
+              {% endfor %}
+          </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm">
+        <div class="card text-center">
+            <div class="card-header">
+                <h5 class="card-title">{{shipping_staff.staff_count}} STAFFS</h5>
+            </div>
+          <div class="card-body text-center bg-info">
+              <h5 class="card-title">{{shipping_staff.dst_position}} Different Posiitons</h5>
+              <h5 class="card-title">{{shipping_staff.avg_family_members}} AVG Family Members</h5>
+              <h5 class="card-title">{{shipping_staff.avg_m_income|floatformat}} Taka AVG Monthly Income</h5>
+              <h5 class="card-title">{{shipping_staff.avg_f_income|floatformat}} Taka AVG Family Income</h5>
+              <h5 class="card-title"> Years AVG Age</h5>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="card text-center">
+            <div class="card-header">
+                <h5 class="card-title"> {{association.acount}} ASSOCIATIONS</h5>
+            </div>
+          <div class="card-body text-center bg-info">
+
+              <h5 class="card-title">{{staff_count.association_count}} Labor Association Having {{staff_count.staff_count}} Members</h5>
+              {% for labors_association in labors_associations%}
+              <h5>
+                  {{labors_association.member}} {{labors_association.zone|title}}
+              </h5>
+              {% endfor %}
+
+              <h5 class="card-title">{{company_count.association_count}} Owners Association Having {{company_count.member_count}} Members</h5>
+
+              {% for owners_association in owners_associations%}
+              <h5>
+                  {{owners_association.member}} {{owners_association.zone|title}}
+              </h5>
+              {% endfor %}
+
+
+          </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card text-center">
+    <div class="card-header">
+        <h5 class="card-title"> {{ghat.ghat_count}} GHATS</h5>
+    </div>
+  <div class="card-body text-center bg-info">
+      <h5 class="card-title">{{ghat.district_count}} Districts</h5>
+      <h5 class="card-title">{{ghat_labor.labor_count}} Labors</h5>
+      <h5 class="card-title">{{ghat_labor.avg_family_members}} AVG Family Members</h5>
+      <h5 class="card-title">{{ghat_labor.avg_d_income|floatformat}} Taka AVG Daily Income</h5>
+      <h5 class="card-title">{{ghat_labor.avg_f_income|floatformat}} Taka AVG Family Monthly Income</h5>
+  </div>
+</div>

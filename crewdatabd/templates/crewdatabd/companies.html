@@ -1,0 +1,75 @@
+{% extends 'crewdatabd/main.html' %}
+
+{% block content %}
+
+        <div class="card text-black mb-3">
+            <h5 class="card-header text-center">COMPANY
+            {% for group in user.groups.all %}
+              {% if group.name == 'admin' or group.name == 'manager' or group.name == 'jahaji' %}
+                <a href="{% url 'create_company' %}" class="btn btn-warning">
+                    <i class="fas fa-plus"></i>
+                </a>
+              {% endif %}
+            {% endfor %}
+            </h5>
+            <div class="card-body">
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                      {{ message }}
+                    </div>
+                {% endfor %}
+                <div align="center" style="overflow:auto">
+                    <table id="company" class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Contact Person</th>
+                                <th scope="col">Contact Number</th>
+                                <th scope="col">Thana</th>
+                                <th scope="col">No of Vessel</th>
+                                {% for group in user.groups.all %}
+                                  {% if group.name == 'admin' or group.name == 'manager' or group.name == 'jahaji' %}
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                                  {% endif %}
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for company in companies %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'company_ships' company.id %}" type="button" class="update-book btn btn-sm btn-info">
+                                      {{ company.id }}
+                                    </a>
+                                </td>
+                                <td>{{ company.company_name }}</td>
+                                <td>{{ company.owner_name }}</td>
+                                <td>{{ company.owner_contact }}</td>
+                                <td>{{ company.thana }}</td>
+                                <td class="text-center">{{ company.no_of_vessel }}</td>
+                                {% for group in user.groups.all %}
+                                  {% if group.name == 'admin' or group.name == 'manager' or group.name == 'jahaji' %}
+                                <td class="text-center">
+                                    <a href="{% url 'update_company' company.id %}" type="button" class="update-book btn btn-sm btn-primary">
+                                      <i class="far fa-edit"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="{% url 'delete_company' company.id %}" type="button" class="update-book btn btn-sm btn-danger">
+                                      <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                                  {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

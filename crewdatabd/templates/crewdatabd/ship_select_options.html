@@ -1,0 +1,6 @@
+<option value="">---------</option>
+{% for vessel in vessels %}
+<option value="{{ vessel.pk }}">{{ vessel.ship_name }}</option>
+{% endfor %}
+
+

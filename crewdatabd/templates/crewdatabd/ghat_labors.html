@@ -1,0 +1,77 @@
+{% extends 'crewdatabd/main.html' %}
+
+{% block content %}
+
+        <div class="card text-black mb-3">
+            <h5 class="card-header text-center">GHAT LABOR
+            {% for group in user.groups.all %}
+              {% if group.name == 'admin' or group.name == 'manager' or group.name == 'ghat' %}
+                <a href="{% url 'create_labor' %}" class="btn btn-warning">
+                    <i class="fas fa-plus"></i>
+                </a>
+              {% endif %}
+            {% endfor %}
+            </h5>
+            <div class="card-body">
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                      {{ message }}
+                    </div>
+                {% endfor %}
+                <div align="center" style="overflow:auto">
+                    <table id="ship" class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Ghat Name</th>
+                                <th scope="col">Ghat Thana</th>
+                                <th scope="col">Labor Name</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Contact Number</th>
+                                <th scope="col">Thana (Labor)</th>
+                                {% for group in user.groups.all %}
+                                  {% if group.name == 'admin' or group.name == 'manager' or group.name == 'ghat' %}
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                                  {% endif %}
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for ghat_labor in ghat_labors %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'read_labor' ghat_labor.id %}" type="button" class="update-book btn btn-sm btn-info">
+                                      {{ ghat_labor.id }}
+                                    </a>
+                                </td>
+                                <td>{{ ghat_labor.ghat_name }}</td>
+                                <td>{{ ghat_labor.ghat_thana }}</td>
+                                <td>{{ ghat_labor.labor_name }}</td>
+                                <td>{{ ghat_labor.labor_position }}</td>
+                                <td>{{ ghat_labor.labor_contact }}</td>
+                                <td>{{ ghat_labor.address_thana }}</td>
+                                {% for group in user.groups.all %}
+                                  {% if group.name == 'admin' or group.name == 'manager' or group.name == 'ghat' %}
+                                <td class="text-center">
+                                    <a href="{% url 'update_labor' ghat_labor.id %}" type="button" class="update-book btn btn-sm btn-primary">
+                                      <i class="far fa-edit"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="{% url 'delete_labor' ghat_labor.id %}" type="button" class="update-book btn btn-sm btn-danger">
+                                      <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                                  {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

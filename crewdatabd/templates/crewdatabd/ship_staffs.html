@@ -1,0 +1,74 @@
+{% extends 'crewdatabd/main.html' %}
+
+{% block content %}
+
+        <div class="card text-black mb-3">
+            <h5 class="card-header text-center">
+                {{ship.ship_name}} : Staffs
+            {% for group in user.groups.all %}
+              {% if group.name == 'admin' or group.name == 'manager' %}
+                <a href="{% url 'create_seafarer' %}" class="btn btn-warning">
+                    <i class="fas fa-plus"></i>
+                </a>
+              {% endif %}
+            {% endfor %}
+            </h5>
+            <div class="card-body">
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                      {{ message }}
+                    </div>
+                {% endfor %}
+                <div align="center" style="overflow:auto">
+                    <table id="ship" class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Contact Number</th>
+                                <th scope="col">Address</th>
+                                {% for group in user.groups.all %}
+                                  {% if group.name == 'admin' or group.name == 'manager' %}
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                                  {% endif %}
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for seafarer in seafarers %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'read_seafarer' seafarer.id %}" type="button" class="update-book btn btn-sm btn-info">
+                                      {{ seafarer.id }}
+                                    </a>
+                                </td>
+                                <td>{{ seafarer.full_name }}</td>
+                                <td>{{ seafarer.position }}</td>
+                                <td>{{ seafarer.phone_number }}</td>
+                                <td>{{ seafarer.home_address }}</td>
+                                {% for group in user.groups.all %}
+                                  {% if group.name == 'admin' or group.name == 'manager' %}
+                                <td class="text-center">
+                                    <a href="{% url 'update_seafarer' seafarer.id %}" type="button" class="update-book btn btn-sm btn-primary">
+                                      <i class="far fa-edit"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="{% url 'delete_seafarer' seafarer.id %}" type="button" class="update-book btn btn-sm btn-danger">
+                                      <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                                  {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}
