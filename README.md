@@ -14,7 +14,7 @@ This is an application to help interested parties to store and retrieve Banglade
 
 ## Clone
 Clone the application:
-git clone https://github.com/smrashel/jahaji.git
+`git clone https://github.com/smrashel/jahaji.git`
 
 ## Installation
 * Create Virtual environment:
@@ -41,9 +41,21 @@ Configure settings.py for Database credentials.
 * Serve the development server:
 `python manage.py runserver`
 
-* Create Groups:
-Login to the admin site with the superuser and create below groups. Add superuser to the admin group. Every user must be a member of one of the groups.
+## Create Groups:
+* Login to the admin site with the superuser and create below groups. Add superuser to the admin group. Every user must be a member of one of the groups.
 admin, ghat, jahaji, manager, vessel, viewer
 
 * Import Essential Data:
 Import District, GoodsType, MobileMoneyAccount, Position, Thana, VesselType data using admin site.
+
+## Team
+* [smrashel](github.com/smrashel)
+
+## FAQ
+* Please ask me if you have any questions regarding the project.
+
+## Support
+* Please support me.
+
+## License
+* Copyright 2020 © [smrashel](github.com/smrashel)
