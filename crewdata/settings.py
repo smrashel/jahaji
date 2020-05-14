@@ -86,13 +86,8 @@ WSGI_APPLICATION = 'crewdata.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_jahaji',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
         'OPTIONS': {
-        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        'read_default_file': '/home/smrashel/jahaji/auth/mysql.cnf'
         }
     }
 }
@@ -142,3 +137,4 @@ STATICFILES_DIRS = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+STATIC_ROOT = '/home/smrashel/jahaji/site/public/static'

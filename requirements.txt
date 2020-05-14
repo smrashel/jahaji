@@ -7,7 +7,6 @@ django-import-export==2.0.2
 et-xmlfile==1.0.1
 jdcal==1.4.1
 MarkupPy==1.14
-mysqlclient==1.4.6
 odfpy==1.4.1
 openpyxl==3.0.3
 pytz==2019.3

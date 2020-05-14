@@ -1,0 +1,47 @@
+{% extends 'crewdatabd/main.html' %}
+
+{% block content %}
+
+        <div class="card text-black mb-3">
+            <h5 class="card-header text-center">VESSEL STAFF DAILY STATS
+            {% for group in user.groups.all %}
+              {% if group.name == 'admin' or group.name == 'manager' or group.name == 'vessel' %}
+                <a href="{% url 'create_seafarer' %}" class="btn btn-warning">
+                    <i class="fas fa-plus"></i>
+                </a>
+              {% endif %}
+            {% endfor %}
+            </h5>
+            <div class="card-body">
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                      {{ message }}
+                    </div>
+                {% endfor %}
+                <div align="center" style="overflow:auto">
+                    <table id="ship" class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">UserId</th>
+                                <th class="text-center" scope="col">Full Points</th>
+                                <th class="text-center" scope="col">Achieved Points</th>
+                                <th class="text-center" scope="col">Achieved Payment(Tk)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for shipping_staff_point in shipping_staff_points %}
+                            <tr>
+                                <td>{{ shipping_staff_point.added_by__username }} </td>
+                                <td class="text-center">{{ shipping_staff_point.full_points }}</td>
+                                <td class="text-center">{{ shipping_staff_point.ach_points }}</td>
+                                <td class="text-center">{{ shipping_staff_point.achv_payment }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

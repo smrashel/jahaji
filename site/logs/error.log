@@ -1,0 +1,361 @@
+[Wed May 13 23:49:21.714454 2020] [wsgi:error] [pid 32488:tid 140335079794432] [remote ::1:40956] Invalid HTTP_HOST header: 'localhost'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[Wed May 13 23:49:21.760796 2020] [wsgi:error] [pid 32488:tid 140335079794432] [remote ::1:40956] Bad Request: /
+[Wed May 13 23:49:44.485208 2020] [wsgi:error] [pid 32488:tid 140335096579840] [remote 192.168.0.106:34554] Not Found: /favicon.ico
+Exception ignored in: <function BaseEventLoop.__del__ at 0x7fa24a640820>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 654, in __del__
+NameError: name 'ResourceWarning' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fa24b60f670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fa24b60f670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fa24b60f670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function BaseEventLoop.__del__ at 0x7f4a28a24820>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 654, in __del__
+NameError: name 'ResourceWarning' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f4a299e0670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f4a299e0670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f4a299e0670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+[Thu May 14 00:07:37.823348 2020] [wsgi:error] [pid 1006:tid 140534363330304] [remote 192.168.0.100:48760] Not Found: /favicon.ico
+[Thu May 14 00:30:37.500847 2020] [wsgi:error] [pid 1006:tid 140534363330304] [remote 192.168.0.106:36578] Not Found: /favicon.ico
+Exception ignored in: <function BaseEventLoop.__del__ at 0x7fd0b09ea820>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 654, in __del__
+NameError: name 'ResourceWarning' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fd0b19a6670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fd0b19a6670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fd0b19a6670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function BaseEventLoop.__del__ at 0x7f4e6c0c3820>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 654, in __del__
+NameError: name 'ResourceWarning' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f4e6d07f670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f4e6d07f670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f4e6d07f670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+[Thu May 14 00:40:23.693492 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38894] Not Found: /favicon.ico
+[Thu May 14 00:48:08.004361 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 192.168.0.106:40912] Not Found: /favicon.ico
+[Thu May 14 00:54:46.945445 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:40056] Not Found: /favicon.ico
+[Thu May 14 01:01:10.669177 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:37980] Not Found: /favicon.ico
+[Thu May 14 01:04:21.824928 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014] Internal Server Error: /load_thanas/
+[Thu May 14 01:04:21.824970 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014] Traceback (most recent call last):
+[Thu May 14 01:04:21.824976 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+[Thu May 14 01:04:21.824981 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     return int(value)
+[Thu May 14 01:04:21.824985 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014] ValueError: invalid literal for int() with base 10: ''
+[Thu May 14 01:04:21.824989 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014] 
+[Thu May 14 01:04:21.824994 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014] The above exception was the direct cause of the following exception:
+[Thu May 14 01:04:21.824998 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014] 
+[Thu May 14 01:04:21.825002 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014] Traceback (most recent call last):
+[Thu May 14 01:04:21.825006 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+[Thu May 14 01:04:21.825010 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     response = get_response(request)
+[Thu May 14 01:04:21.825015 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+[Thu May 14 01:04:21.825019 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     response = self.process_exception_by_middleware(e, request)
+[Thu May 14 01:04:21.825023 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+[Thu May 14 01:04:21.825028 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Thu May 14 01:04:21.825032 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+[Thu May 14 01:04:21.825036 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     return view_func(request, *args, **kwargs)
+[Thu May 14 01:04:21.825040 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/crewdatabd/decorators.py", line 22, in wrapper_func
+[Thu May 14 01:04:21.825056 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     return view_func(request, *args, **kwargs)
+[Thu May 14 01:04:21.825060 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/crewdatabd/views.py", line 79, in load_thanas
+[Thu May 14 01:04:21.825064 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     thanas = Thana.objects.filter(district=district_id).order_by('thana_name')
+[Thu May 14 01:04:21.825068 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+[Thu May 14 01:04:21.825072 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Thu May 14 01:04:21.825075 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+[Thu May 14 01:04:21.825079 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     return self._filter_or_exclude(False, *args, **kwargs)
+[Thu May 14 01:04:21.825083 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+[Thu May 14 01:04:21.825087 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     clone.query.add_q(Q(*args, **kwargs))
+[Thu May 14 01:04:21.825090 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+[Thu May 14 01:04:21.825094 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     clause, _ = self._add_q(q_object, self.used_aliases)
+[Thu May 14 01:04:21.825098 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+[Thu May 14 01:04:21.825102 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     child_clause, needed_inner = self.build_filter(
+[Thu May 14 01:04:21.825105 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+[Thu May 14 01:04:21.825109 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     condition = self.build_lookup(lookups, col, value)
+[Thu May 14 01:04:21.825113 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+[Thu May 14 01:04:21.825117 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     lookup = lookup_class(lhs, rhs)
+[Thu May 14 01:04:21.825120 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+[Thu May 14 01:04:21.825124 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     self.rhs = self.get_prep_lookup()
+[Thu May 14 01:04:21.825128 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+[Thu May 14 01:04:21.825132 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     self.rhs = target_field.get_prep_value(self.rhs)
+[Thu May 14 01:04:21.825135 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+[Thu May 14 01:04:21.825143 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014]     raise e.__class__(
+[Thu May 14 01:04:21.825147 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:38014] ValueError: Field 'id' expected a number but got ''.
+[Thu May 14 03:02:37.293941 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 192.168.0.106:45000] Not Found: /favicon.ico
+[Thu May 14 10:01:41.367406 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 192.168.0.100:42812] Not Found: /favicon.ico
+[Thu May 14 10:15:26.656684 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 192.168.0.106:56892] Not Found: /favicon.ico
+[Thu May 14 11:20:54.524342 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 45.13.93.82:39796] Invalid HTTP_HOST header: 'ip.ws.126.net:443'. You may need to add 'ip.ws.126.net' to ALLOWED_HOSTS.
+[Thu May 14 11:20:54.565411 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 45.13.93.82:39796] Bad Request: /
+[Thu May 14 11:42:48.734631 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 45.14.44.242:63444] Invalid HTTP_HOST header: '127.0.1.1'. You may need to add '127.0.1.1' to ALLOWED_HOSTS.
+[Thu May 14 11:42:48.837943 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 45.14.44.242:63444] Bad Request: /robots.txt
+[Thu May 14 14:01:20.029937 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 104.152.52.25:43275] Invalid HTTP_HOST header: '127.0.1.1'. You may need to add '127.0.1.1' to ALLOWED_HOSTS.
+[Thu May 14 14:01:20.067170 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 104.152.52.25:43275] Bad Request: /
+[Thu May 14 14:06:20.167393 2020] [wsgi:error] [pid 5218:tid 139983503480576] (70007)The timeout specified has expired: [client 104.152.52.25:43275] mod_wsgi (pid=5218): Failed to proxy response to client.
+[Thu May 14 14:53:14.951989 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 103.221.254.244:36824] Not Found: /favicon.ico
+[Thu May 14 16:16:20.149132 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324] Internal Server Error: /
+[Thu May 14 16:16:20.149179 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324] Traceback (most recent call last):
+[Thu May 14 16:16:20.149187 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+[Thu May 14 16:16:20.149192 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     response = get_response(request)
+[Thu May 14 16:16:20.149197 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+[Thu May 14 16:16:20.149202 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     response = self.process_exception_by_middleware(e, request)
+[Thu May 14 16:16:20.149207 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+[Thu May 14 16:16:20.149212 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Thu May 14 16:16:20.149217 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+[Thu May 14 16:16:20.149222 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return view_func(request, *args, **kwargs)
+[Thu May 14 16:16:20.149227 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/crewdatabd/views.py", line 72, in home
+[Thu May 14 16:16:20.149243 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     'labors_associations': labors_associations}
+[Thu May 14 16:16:20.149247 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+[Thu May 14 16:16:20.149252 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     content = loader.render_to_string(template_name, context, request, using=using)
+[Thu May 14 16:16:20.149256 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+[Thu May 14 16:16:20.149261 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return template.render(context, request)
+[Thu May 14 16:16:20.149265 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+[Thu May 14 16:16:20.149269 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.template.render(context)
+[Thu May 14 16:16:20.149274 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+[Thu May 14 16:16:20.149279 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self._render(context)
+[Thu May 14 16:16:20.149283 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:16:20.149287 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.nodelist.render(context)
+[Thu May 14 16:16:20.149291 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:16:20.149296 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     bit = node.render_annotated(context)
+[Thu May 14 16:16:20.149300 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:20.149304 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.render(context)
+[Thu May 14 16:16:20.149308 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+[Thu May 14 16:16:20.149312 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return compiled_parent._render(context)
+[Thu May 14 16:16:20.149317 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:16:20.149321 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.nodelist.render(context)
+[Thu May 14 16:16:20.149325 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:16:20.149329 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     bit = node.render_annotated(context)
+[Thu May 14 16:16:20.149333 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:20.149337 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.render(context)
+[Thu May 14 16:16:20.149344 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 188, in render
+[Thu May 14 16:16:20.149348 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return template.render(context)
+[Thu May 14 16:16:20.149352 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 173, in render
+[Thu May 14 16:16:20.149356 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self._render(context)
+[Thu May 14 16:16:20.149361 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:16:20.149365 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.nodelist.render(context)
+[Thu May 14 16:16:20.149369 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:16:20.149373 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     bit = node.render_annotated(context)
+[Thu May 14 16:16:20.149377 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:20.149382 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.render(context)
+[Thu May 14 16:16:20.149385 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 209, in render
+[Thu May 14 16:16:20.149389 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     nodelist.append(node.render_annotated(context))
+[Thu May 14 16:16:20.149393 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:20.149398 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.render(context)
+[Thu May 14 16:16:20.149402 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 309, in render
+[Thu May 14 16:16:20.149406 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return nodelist.render(context)
+[Thu May 14 16:16:20.149410 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:16:20.149414 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     bit = node.render_annotated(context)
+[Thu May 14 16:16:20.149418 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:20.149422 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return self.render(context)
+[Thu May 14 16:16:20.149426 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+[Thu May 14 16:16:20.149430 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+[Thu May 14 16:16:20.149438 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+[Thu May 14 16:16:20.149443 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+[Thu May 14 16:16:20.149447 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+[Thu May 14 16:16:20.149451 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324]     raise NoReverseMatch(msg)
+[Thu May 14 16:16:20.149456 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41324] django.urls.exceptions.NoReverseMatch: Reverse for 'seafarer_stats' not found. 'seafarer_stats' is not a valid view function or pattern name.
+[Thu May 14 16:16:27.338672 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326] Internal Server Error: /
+[Thu May 14 16:16:27.338751 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326] Traceback (most recent call last):
+[Thu May 14 16:16:27.338768 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+[Thu May 14 16:16:27.338774 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     response = get_response(request)
+[Thu May 14 16:16:27.338779 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+[Thu May 14 16:16:27.338784 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     response = self.process_exception_by_middleware(e, request)
+[Thu May 14 16:16:27.338789 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+[Thu May 14 16:16:27.338795 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Thu May 14 16:16:27.338799 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+[Thu May 14 16:16:27.338804 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return view_func(request, *args, **kwargs)
+[Thu May 14 16:16:27.338809 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/crewdatabd/views.py", line 72, in home
+[Thu May 14 16:16:27.338813 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     'labors_associations': labors_associations}
+[Thu May 14 16:16:27.338818 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+[Thu May 14 16:16:27.338822 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     content = loader.render_to_string(template_name, context, request, using=using)
+[Thu May 14 16:16:27.338827 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+[Thu May 14 16:16:27.338831 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return template.render(context, request)
+[Thu May 14 16:16:27.338834 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+[Thu May 14 16:16:27.338856 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.template.render(context)
+[Thu May 14 16:16:27.338860 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+[Thu May 14 16:16:27.338864 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self._render(context)
+[Thu May 14 16:16:27.338868 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:16:27.338871 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.nodelist.render(context)
+[Thu May 14 16:16:27.338875 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:16:27.338879 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     bit = node.render_annotated(context)
+[Thu May 14 16:16:27.338883 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:27.338888 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.render(context)
+[Thu May 14 16:16:27.338892 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+[Thu May 14 16:16:27.338896 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return compiled_parent._render(context)
+[Thu May 14 16:16:27.338901 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:16:27.338905 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.nodelist.render(context)
+[Thu May 14 16:16:27.338910 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:16:27.338915 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     bit = node.render_annotated(context)
+[Thu May 14 16:16:27.338920 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:27.338925 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.render(context)
+[Thu May 14 16:16:27.338930 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 188, in render
+[Thu May 14 16:16:27.338935 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return template.render(context)
+[Thu May 14 16:16:27.338940 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 173, in render
+[Thu May 14 16:16:27.338945 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self._render(context)
+[Thu May 14 16:16:27.338950 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:16:27.338961 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.nodelist.render(context)
+[Thu May 14 16:16:27.338966 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:16:27.338971 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     bit = node.render_annotated(context)
+[Thu May 14 16:16:27.338978 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:27.338985 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.render(context)
+[Thu May 14 16:16:27.338990 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 209, in render
+[Thu May 14 16:16:27.338998 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     nodelist.append(node.render_annotated(context))
+[Thu May 14 16:16:27.339006 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:27.339014 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.render(context)
+[Thu May 14 16:16:27.339021 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 309, in render
+[Thu May 14 16:16:27.339027 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return nodelist.render(context)
+[Thu May 14 16:16:27.339035 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:16:27.339041 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     bit = node.render_annotated(context)
+[Thu May 14 16:16:27.339048 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:16:27.339054 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return self.render(context)
+[Thu May 14 16:16:27.339060 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+[Thu May 14 16:16:27.339065 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+[Thu May 14 16:16:27.339070 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+[Thu May 14 16:16:27.339074 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+[Thu May 14 16:16:27.339080 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+[Thu May 14 16:16:27.339087 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326]     raise NoReverseMatch(msg)
+[Thu May 14 16:16:27.339093 2020] [wsgi:error] [pid 5216:tid 139983764043520] [remote 203.17.65.19:41326] django.urls.exceptions.NoReverseMatch: Reverse for 'seafarer_stats' not found. 'seafarer_stats' is not a valid view function or pattern name.
+[Thu May 14 16:17:16.834219 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372] Internal Server Error: /
+[Thu May 14 16:17:16.834258 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372] Traceback (most recent call last):
+[Thu May 14 16:17:16.834267 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+[Thu May 14 16:17:16.834272 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     response = get_response(request)
+[Thu May 14 16:17:16.834277 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+[Thu May 14 16:17:16.834282 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     response = self.process_exception_by_middleware(e, request)
+[Thu May 14 16:17:16.834287 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+[Thu May 14 16:17:16.834292 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Thu May 14 16:17:16.834297 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+[Thu May 14 16:17:16.834302 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return view_func(request, *args, **kwargs)
+[Thu May 14 16:17:16.834306 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/crewdatabd/views.py", line 72, in home
+[Thu May 14 16:17:16.834311 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     'labors_associations': labors_associations}
+[Thu May 14 16:17:16.834316 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+[Thu May 14 16:17:16.834320 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     content = loader.render_to_string(template_name, context, request, using=using)
+[Thu May 14 16:17:16.834325 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+[Thu May 14 16:17:16.834330 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return template.render(context, request)
+[Thu May 14 16:17:16.834334 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+[Thu May 14 16:17:16.834339 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.template.render(context)
+[Thu May 14 16:17:16.834344 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+[Thu May 14 16:17:16.834348 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self._render(context)
+[Thu May 14 16:17:16.834353 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:17:16.834358 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.nodelist.render(context)
+[Thu May 14 16:17:16.834374 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:17:16.834378 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     bit = node.render_annotated(context)
+[Thu May 14 16:17:16.834382 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:17:16.834387 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.render(context)
+[Thu May 14 16:17:16.834391 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+[Thu May 14 16:17:16.834395 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return compiled_parent._render(context)
+[Thu May 14 16:17:16.834399 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:17:16.834403 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.nodelist.render(context)
+[Thu May 14 16:17:16.834407 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:17:16.834411 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     bit = node.render_annotated(context)
+[Thu May 14 16:17:16.834415 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:17:16.834419 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.render(context)
+[Thu May 14 16:17:16.834423 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 188, in render
+[Thu May 14 16:17:16.834427 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return template.render(context)
+[Thu May 14 16:17:16.834431 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 173, in render
+[Thu May 14 16:17:16.834436 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self._render(context)
+[Thu May 14 16:17:16.834440 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+[Thu May 14 16:17:16.834444 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.nodelist.render(context)
+[Thu May 14 16:17:16.834448 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:17:16.834452 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     bit = node.render_annotated(context)
+[Thu May 14 16:17:16.834456 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:17:16.834461 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.render(context)
+[Thu May 14 16:17:16.834465 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 209, in render
+[Thu May 14 16:17:16.834473 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     nodelist.append(node.render_annotated(context))
+[Thu May 14 16:17:16.834477 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:17:16.834482 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.render(context)
+[Thu May 14 16:17:16.834486 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 309, in render
+[Thu May 14 16:17:16.834490 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return nodelist.render(context)
+[Thu May 14 16:17:16.834494 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+[Thu May 14 16:17:16.834499 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     bit = node.render_annotated(context)
+[Thu May 14 16:17:16.834503 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+[Thu May 14 16:17:16.834507 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return self.render(context)
+[Thu May 14 16:17:16.834512 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+[Thu May 14 16:17:16.834519 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+[Thu May 14 16:17:16.834523 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+[Thu May 14 16:17:16.834527 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+[Thu May 14 16:17:16.834532 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]   File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+[Thu May 14 16:17:16.834536 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372]     raise NoReverseMatch(msg)
+[Thu May 14 16:17:16.834540 2020] [wsgi:error] [pid 5216:tid 139983797614336] [remote 203.17.65.19:41372] django.urls.exceptions.NoReverseMatch: Reverse for 'seafarer_stats' not found. 'seafarer_stats' is not a valid view function or pattern name.
+Exception ignored in: <function BaseEventLoop.__del__ at 0x7f5080d89820>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 654, in __del__
+NameError: name 'ResourceWarning' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f5081d45670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f5081d45670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f5081d45670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f507ab86dc0>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f507ab86dc0>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f507ab86dc0>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function BaseEventLoop.__del__ at 0x7f476d218820>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 654, in __del__
+NameError: name 'ResourceWarning' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f476e1d4670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f476e1d4670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function BaseEventLoop.__del__ at 0x7fe4333b5820>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 654, in __del__
+NameError: name 'ResourceWarning' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fe43836d670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fe43836d670>
+Traceback (most recent call last):
+  File "/home/smrashel/jahaji/venv/lib/python3.8/site-packages/asgiref/local.py", line 95, in __del__
+NameError: name 'AttributeError' is not defined

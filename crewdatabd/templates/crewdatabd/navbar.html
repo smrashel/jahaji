@@ -53,13 +53,19 @@
           {% endif %}
         {% endfor %}
 
-        {% for group in user.groups.all %}
-          {% if group.name == 'admin' or group.name == 'manager' or group.name == 'vessel' or group.name == 'viewer' %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'seafarers' %}">Vessel Staff</a>
-            </li>
-          {% endif %}
-        {% endfor %}
+      {% for group in user.groups.all %}
+        {% if group.name == 'admin' or group.name == 'manager' or group.name == 'vessel' or group.name == 'viewer' %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Vessel Staff
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'seafarers' %}">Staff</a>
+              <a class="dropdown-item" href="{% url 'seafarer_stats' %}">Daily Stats</a>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
 
       </ul>
 

@@ -1,6 +1,7 @@
 import io
 
-from django.db.models import Count, Sum, Avg
+from django.db.models import Count, Sum, Avg, FloatField
+from django.db.models.functions import Cast
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, FileResponse
 from django.contrib.auth import authenticate, login, logout
@@ -346,6 +347,19 @@ def seafarers(request):
     context = {'seafarers': seafarers}
     return render(request, 'crewdatabd/seafarers.html', context)
 
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin', 'manager', 'vessel', 'viewer'])    
+def seafarer_stats(request):
+    shipping_staff_points = ShippingStaff.objects.values('added_by__username').annotate(full_points=Count('full_name')*20,
+    ach_points=(Count('full_name')*1+Count('position')*1+Count('contact_number')*1+Count('home_address')*2+Count('district')*0
+    +Count('thana')*1+Count('nid_number')*2+Count('monthly_salary')*2+Count('family_members')*1+Count('avg_family_m_income')*2
+    +Count('birth_date')*1+Count('education_level')*2+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('bank_account')*1
+    +Count('blood_group')*1)).annotate(achv_payment=(Cast('ach_points', FloatField()))*.5)
+
+    context = {'shipping_staff_points': shipping_staff_points}
+    return render(request, 'crewdatabd/seafarer_stats.html', context)
+    
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin', 'manager', 'vessel', 'viewer'])

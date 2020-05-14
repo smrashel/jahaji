@@ -31,6 +31,7 @@ urlpatterns = [
 
 
     path('seafarers/', views.seafarers, name="seafarers"),
+    path('seafarer_stats/', views.seafarer_stats, name="seafarer_stats"),
     path('ship_seafarers/<str:pk>/', views.shipStaffs, name="ship_staffs"),
     path('create_seafarer/', views.createShippingStaff, name="create_seafarer"),
     path('read_seafarer/<str:pk>/', views.readShippingStaff, name="read_seafarer"),
