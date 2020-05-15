@@ -349,9 +349,24 @@ def seafarers(request):
 
 
 @login_required(login_url='login')
-@allowed_users(allowed_roles=['admin', 'manager', 'vessel', 'viewer'])    
+@allowed_users(allowed_roles=['admin', 'manager', 'vessel'])
 def seafarer_stats(request):
-    shipping_staff_points = ShippingStaff.objects.values('added_by__username').annotate(full_points=Count('full_name')*20,
+    start_date = datetime.date.today()
+    end_date = datetime.date.today() + datetime.timedelta(days=1)
+    if request.method == 'POST':
+        start_date = request.POST.get('start_date', False)
+        end_date = request.POST.get('end_date', False)
+
+        shipping_staff_points = ShippingStaff.objects.filter(added_date__gte=start_date, added_date__lte=end_date).values('added_by__username').annotate(full_points=Count('full_name')*20,
+        ach_points=(Count('full_name')*1+Count('position')*1+Count('contact_number')*1+Count('home_address')*2+Count('district')*0
+        +Count('thana')*1+Count('nid_number')*2+Count('monthly_salary')*2+Count('family_members')*1+Count('avg_family_m_income')*2
+        +Count('birth_date')*1+Count('education_level')*2+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('bank_account')*1
+        +Count('blood_group')*1)).annotate(achv_payment=(Cast('ach_points', FloatField()))*.5)
+
+        context = {'shipping_staff_points': shipping_staff_points}
+        return render(request, 'crewdatabd/seafarer_stats.html', context)
+
+    shipping_staff_points = ShippingStaff.objects.filter(added_date__gte=start_date, added_date__lte=end_date).values('added_by__username').annotate(full_points=Count('full_name')*20,
     ach_points=(Count('full_name')*1+Count('position')*1+Count('contact_number')*1+Count('home_address')*2+Count('district')*0
     +Count('thana')*1+Count('nid_number')*2+Count('monthly_salary')*2+Count('family_members')*1+Count('avg_family_m_income')*2
     +Count('birth_date')*1+Count('education_level')*2+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('bank_account')*1
@@ -523,12 +538,40 @@ def ghat_labors(request):
 
 
 @login_required(login_url='login')
-@allowed_users(allowed_roles=['admin', 'manager', 'vessel', 'viewer'])
+@allowed_users(allowed_roles=['admin', 'manager', 'ghat', 'viewer'])
 def ghatLabors(request, pk):
     ghat = get_object_or_404(Ghat, id=pk)
     ghat_labors = GhatLabor.objects.filter(ghat_name=pk)
     context = {'ghat': ghat, 'ghat_labors': ghat_labors}
     return render(request, 'crewdatabd/ghat_single_labors.html', context)
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin', 'manager', 'ghat'])
+def labor_stats(request):
+    start_date = datetime.date.today()
+    end_date = datetime.date.today() + datetime.timedelta(days=1)
+    if request.method == 'POST':
+        start_date = request.POST.get('start_date', False)
+        end_date = request.POST.get('end_date', False)
+
+        labor_points = GhatLabor.objects.filter(added_date__gte=start_date, added_date__lte=end_date).values('added_by__username').annotate(full_points=Count('labor_name')*20,
+        ach_points=(Count('labor_name')*1+Count('labor_position')*1+Count('labor_contact')*1+Count('labor_address')*2+Count('address_district')*1
+        +Count('address_thana')*1+Count('family_members')*1+Count('avg_family_income_m')*1+Count('avg_daily_income')*2+Count('avg_working_day_m')*1
+        +Count('education_level')*2+Count('birth_date')*1+Count('nid_number')*2+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('bank_account')*1
+        +Count('blood_group')*1)).annotate(achv_payment=(Cast('ach_points', FloatField()))*.5)
+
+        context = {'labor_points': labor_points}
+        return render(request, 'crewdatabd/labor_stats.html', context)
+
+    labor_points = GhatLabor.objects.filter(added_date__gte=start_date, added_date__lte=end_date).values('added_by__username').annotate(full_points=Count('labor_name')*20,
+    ach_points=(Count('labor_name')*1+Count('labor_position')*1+Count('labor_contact')*1+Count('labor_address')*2+Count('address_district')*1
+    +Count('address_thana')*1+Count('family_members')*1+Count('avg_family_income_m')*1+Count('avg_daily_income')*2+Count('avg_working_day_m')*1
+    +Count('education_level')*2+Count('birth_date')*1+Count('nid_number')*2+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('bank_account')*1
+    +Count('blood_group')*1)).annotate(achv_payment=(Cast('ach_points', FloatField()))*.5)
+
+    context = {'labor_points': labor_points}
+    return render(request, 'crewdatabd/labor_stats.html', context)
 
 
 @login_required(login_url='login')

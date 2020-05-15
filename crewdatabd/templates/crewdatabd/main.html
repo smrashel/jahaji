@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <!-- DataTables Plugin CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    <!-- Fengyuan Chen's Datepicker -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+     <!-- Datepicker CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+
     <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/css/seafarer_details.css' %}">
 
@@ -38,9 +39,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!--DataTable Plugin javascript-->
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<!-- Fengyuan Chen's Datepicker -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+<!--datepicker javascript-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <script src="{% static '/js/main.js' %}"></script>
 
 <script>
@@ -51,13 +51,22 @@ $(document).ready( function () {
 } );
 </script>
 
-<script>
-  $(function () {
-    $("#id_birth_date").datepicker({
-      format:'yyyy-m-d',
+<script >
+    $(function () {
+        $('.jq-datepicker').datepicker({
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                todayHighlight: true,
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                autoclose: true,
+                changeMonth: true,
+                changeYear: true,
+                orientation: "button"
+        });
     });
-  });
 </script>
+<!--datepicker javascript ends-->
 
 <script>
     $("#id_district").change(function () {

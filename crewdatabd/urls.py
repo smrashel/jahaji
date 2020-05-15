@@ -45,6 +45,7 @@ urlpatterns = [
     path('delete_ghat/<str:pk>/', views.deleteGhat, name="delete_ghat"),
 
     path('ghat_labors/', views.ghat_labors, name="ghat_labors"),
+    path('labor_stats/', views.labor_stats, name="labor_stats"),
     path('create_labor/', views.createGhatLabor, name="create_labor"),
     path('read_labor/<str:pk>/', views.readGhatLabor, name="read_labor"),
     path('update_labor/<str:pk>/', views.updateGhatLabor, name="update_labor"),

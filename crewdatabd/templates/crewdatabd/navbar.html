@@ -39,8 +39,14 @@
 
         {% for group in user.groups.all %}
           {% if group.name == 'admin' or group.name == 'manager' or group.name == 'ghat' or group.name == 'viewer' %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'ghat_labors' %}">Ghat Labor</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ghat Labor
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'ghat_labors' %}">Labor</a>
+                <a class="dropdown-item" href="{% url 'labor_stats' %}">Daily Stats</a>
+              </div>
             </li>
           {% endif %}
         {% endfor %}

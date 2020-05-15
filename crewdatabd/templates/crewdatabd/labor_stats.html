@@ -3,11 +3,11 @@
 {% block content %}
 
         <div class="card text-black mb-3">
-            <h5 class="card-header text-center">VESSEL STAFF DAILY STATS
+            <h5 class="card-header text-center">GHAT LABOR DAILY STATS
             </h5>
             <div class="card-body">
                 <div class="container">
-                    <form action="{% url 'seafarer_stats' %}" method="POST" autocomplete="off">
+                    <form action="{% url 'labor_stats' %}" method="POST" autocomplete="off">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-sm">

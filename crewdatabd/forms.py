@@ -98,7 +98,7 @@ class ShippingStaffForm(ModelForm):
             'family_members': forms.TextInput(attrs={'class': 'form-control'}),
             'monthly_salary': forms.TextInput(attrs={'class': 'form-control'}),
             'avg_family_m_income': forms.TextInput(attrs={'class': 'form-control'}),
-            'birth_date': forms.TextInput(attrs={'class': 'form-control'}),
+            'birth_date': forms.TextInput(attrs={'class': 'form-control jq-datepicker'}),
             'nid_number': forms.TextInput(attrs={'class': 'form-control'}),
             'education_level': forms.Select(attrs={'class': 'form-control'}),
             'professional_certificate': forms.TextInput(attrs={'class': 'form-control'}),
