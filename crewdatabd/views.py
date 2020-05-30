@@ -1,7 +1,8 @@
 import io
 
-from django.db.models import Count, Sum, Avg, FloatField
-from django.db.models.functions import Cast
+from django.db.models import Count, Sum, Avg, FloatField, F
+from django.db.models.functions import Cast, TruncYear
+from django.db import connection
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, FileResponse
 from django.contrib.auth import authenticate, login, logout
@@ -17,6 +18,7 @@ import datetime
 from .models import *
 from .forms import *
 from .decorators import *
+from crewdatabd.templatetags import custom_time
 
 
 # Create your views here.
@@ -46,8 +48,6 @@ def logoutUser(request):
 
 @login_required(login_url='login')
 def home(request):
-    shipping_staff_point = ShippingStaff.objects.values('added_by').annotate(name=Count('full_name'), position=Count('position'), mobile=Count('contact_number'), address=Count('home_address'), district=Count('district'))
-
     ship_count = Vessel.objects.count()
     staff_count = ShippingStaff.objects.aggregate(staff_count=Count('id', distinct=True), association_count=Count('affiliated_association', distinct=True))
     shipping_staff = ShippingStaff.objects.aggregate(staff_count=Count('full_name'),
@@ -65,11 +65,17 @@ def home(request):
     labors_associations = Association.objects.values('zone').annotate(member=Count('shippingstaff__full_name'))
     ghat = Ghat.objects.aggregate(ghat_count=Count('ghat_name'), district_count=Count('district', distinct=True))
     ghat_labor = GhatLabor.objects.aggregate(labor_count=Count('labor_name'), avg_family_members=Avg('family_members'), avg_d_income=Avg('avg_daily_income'), avg_f_income=Avg('avg_family_income_m'))
+    with connection.cursor() as cursor:
+        cursor.execute("select ROUND(AVG(DATEDIFF(CURDATE(), birth_date) / 365.25), 2) as avg_age FROM crewdatabd_shippingstaff")
+        age = cursor.fetchone()
+
+        cursor.execute("SELECT COUNT(DISTINCT(association_id)) AS association, COUNT(DISTINCT(companie_id)) AS company FROM crewdatabd_companie_owners_association")
+        ass_company = cursor.fetchone()
 
     context = {'company_count': company_count, 'ship_count': ship_count,
                'association': association, 'ghat': ghat, 'ghat_labor': ghat_labor, 'staff_count': staff_count,
                'shipping_staff': shipping_staff, 'vessel_staffs': vessel_staffs, 'owners_associations': owners_associations,
-               'labors_associations': labors_associations}
+               'labors_associations': labors_associations, 'age': age, 'ass_company': ass_company}
     return render(request, 'crewdatabd/dashboard.html', context)
 
 
@@ -358,19 +364,19 @@ def seafarer_stats(request):
         end_date = request.POST.get('end_date', False)
 
         shipping_staff_points = ShippingStaff.objects.filter(added_date__gte=start_date, added_date__lte=end_date).values('added_by__username').annotate(full_points=Count('full_name')*20,
-        ach_points=(Count('full_name')*1+Count('position')*1+Count('contact_number')*1+Count('home_address')*2+Count('district')*0
-        +Count('thana')*1+Count('nid_number')*2+Count('monthly_salary')*2+Count('family_members')*1+Count('avg_family_m_income')*2
-        +Count('birth_date')*1+Count('education_level')*2+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('bank_account')*1
-        +Count('blood_group')*1)).annotate(achv_payment=(Cast('ach_points', FloatField()))*.5)
+        ach_points=(Count('vessel')*1+Count('full_name')*1+Count('contact_number')*1+Count('position')*1+Count('staff_class')*1+Count('joining_year')*1
+        +Count('home_address')*2+Count('district')*0+Count('thana')*1+Count('monthly_salary')*1+Count('birth_date')*1+Count('education_level')*1
+        +Count('family_members')*1+Count('avg_family_m_income')*1+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('blood_group')*1
+        +Count('nid_number')*2+Count('affiliated_association')*1)).annotate(achv_payment=(Cast('ach_points', FloatField()))*.5)
 
         context = {'shipping_staff_points': shipping_staff_points}
         return render(request, 'crewdatabd/seafarer_stats.html', context)
 
     shipping_staff_points = ShippingStaff.objects.filter(added_date__gte=start_date, added_date__lte=end_date).values('added_by__username').annotate(full_points=Count('full_name')*20,
-    ach_points=(Count('full_name')*1+Count('position')*1+Count('contact_number')*1+Count('home_address')*2+Count('district')*0
-    +Count('thana')*1+Count('nid_number')*2+Count('monthly_salary')*2+Count('family_members')*1+Count('avg_family_m_income')*2
-    +Count('birth_date')*1+Count('education_level')*2+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('bank_account')*1
-    +Count('blood_group')*1)).annotate(achv_payment=(Cast('ach_points', FloatField()))*.5)
+        ach_points=(Count('vessel')*1+Count('full_name')*1+Count('contact_number')*1+Count('position')*1+Count('staff_class')*1+Count('joining_year')*1
+        +Count('home_address')*2+Count('district')*0+Count('thana')*1+Count('monthly_salary')*1+Count('birth_date')*1+Count('education_level')*1
+        +Count('family_members')*1+Count('avg_family_m_income')*1+Count('mobile_type')*1+Count('mobile_money_account')*1+Count('blood_group')*1
+        +Count('nid_number')*2+Count('affiliated_association')*1)).annotate(achv_payment=(Cast('ach_points', FloatField()))*.5)
 
     context = {'shipping_staff_points': shipping_staff_points}
     return render(request, 'crewdatabd/seafarer_stats.html', context)
@@ -646,3 +652,80 @@ def deleteGhatLabor(request, pk):
     context = {'ghat_labor': ghat_labor, 'heading': heading}
     return render(request, 'crewdatabd/ghat_labor_delete.html', context)
 
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin', 'manager', 'jahaji'])
+def stakeholders(request):
+    stakeholders = ExternalStakeholder.objects.all()
+
+    context = {'stakeholders': stakeholders}
+    return render(request, 'crewdatabd/stakeholders.html', context)
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin', 'manager', 'jahaji'])
+def create_stakeholder(request):
+    form = ExternalStakeholderForm()
+    heading = 'Create Stakeholder'
+
+    if request.method == 'POST':
+        form = ExternalStakeholderForm(request.POST)
+        if form.is_valid():
+            fs = form.save(commit=False)
+            fs.added_by = request.user
+            fs.save()
+
+            stakeholder = form.cleaned_data.get('full_name')
+            messages.success(request, 'Company  was created for ' + stakeholder + '.')
+            return redirect('stakeholders')
+
+    context = {'form': form, 'heading': heading}
+    return render(request, 'crewdatabd/stakeholder.html', context)
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin', 'manager', 'jahaji'])
+def read_stakeholder(request, pk):
+    stakeholder = get_object_or_404(ExternalStakeholder, id=pk)
+    heading = 'Stakeholder'
+
+    context = {'stakeholder': stakeholder, 'heading': heading}
+    return render(request, 'crewdatabd/stakeholder_details.html', context)
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin', 'manager', 'jahaji'])
+def update_stakeholder(request, pk):
+    stakeholder = get_object_or_404(ExternalStakeholder, id=pk)
+    form = ExternalStakeholderForm(instance=stakeholder)
+    heading = 'Update Stakeholder'
+
+    if request.method == 'POST':
+        form = ExternalStakeholderForm(request.POST, instance=stakeholder)
+        if form.is_valid():
+            fs = form.save(commit=False)
+            fs.updated_by = request.user
+            fs.updated_date = timezone.now()
+            fs.save()
+            stakeholder = form.cleaned_data.get('full_name')
+            messages.success(request, 'Stakeholder was updated for ' + stakeholder + '.')
+            return redirect('stakeholders')
+
+    context = {'form': form, 'heading': heading}
+    return render(request, 'crewdatabd/stakeholder.html', context)
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin', 'manager', 'jahaji'])
+def delete_stakeholder(request, pk):
+    stakeholder = get_object_or_404(ExternalStakeholder, id=pk)
+    item = stakeholder.full_name
+    heading = 'Delete Stakeholder'
+
+    if request.method == 'POST':
+        stakeholder.delete()
+        messages.success(request, 'Deleted Stakeholder was ' + item + '.')
+        return redirect('stakeholders')
+
+    context = {'stakeholder': stakeholder, 'heading': heading}
+    return render(request, 'crewdatabd/stakeholder_delete.html', context)

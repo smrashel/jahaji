@@ -24,6 +24,7 @@
                             <tr>
                                 <th scope="col">Id</th>
                                 <th scope="col">Company Name</th>
+                                <th scope="col">Owner Name</th>
                                 <th scope="col">Vessel Name</th>
                                 <th scope="col">Reg No</th>
                                 <th scope="col">Ship Type</th>
@@ -45,6 +46,7 @@
                                     </a>
                                 </td>
                                 <td>{{ ship.company }}</td>
+                                <td>{{ ship.company.owner_name }}</td>
                                 <td>{{ ship.ship_name }}</td>
                                 <td>{{ ship.registration_number }}</td>
                                 <td>{{ ship.ship_type }}</td>

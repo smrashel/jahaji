@@ -9,8 +9,8 @@ admin.site.index_title = "Administration"
 
 # Register your models here.
 @admin.register(District, Thana, Association, Companie)
-@admin.register(VesselType, GoodsType, Vessel, Position, EducationLevel,
-                MobileMoneyAccount, ShippingStaff, Ghat, GhatLabor)
+@admin.register(VesselType, GoodsType, Vessel, Position, EducationLevel, MobileMoneyAccount, StaffClass,
+                ShippingStaff, Ghat, GhatLabor, StakeholderSector, ExternalStakeholder)
 class CompanieAdmin(ImportExportModelAdmin):
     pass
 

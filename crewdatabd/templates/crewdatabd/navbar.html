@@ -73,6 +73,14 @@
         {% endif %}
       {% endfor %}
 
+      {% for group in user.groups.all %}
+        {% if group.name == 'admin' or group.name == 'manager' or group.name == 'jahaji' %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'stakeholders' %}">Stakeholder</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+
       </ul>
 
       <ul class="navbar-nav navbar-right">

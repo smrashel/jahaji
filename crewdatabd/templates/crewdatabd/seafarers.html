@@ -28,6 +28,8 @@
                                 <th scope="col">Position</th>
                                 <th scope="col">Contact Number</th>
                                 <th scope="col">Thana</th>
+                                <th scope="col">Family Members</th>
+                                <th scope="col">Monthly Family Income</th>
                                 {% for group in user.groups.all %}
                                   {% if group.name == 'admin' or group.name == 'manager' or group.name == 'vessel' %}
                                 <th scope="col">Edit</th>
@@ -49,6 +51,8 @@
                                 <td>{{ seafarer.position }}</td>
                                 <td>{{ seafarer.contact_number }}</td>
                                 <td>{{ seafarer.thana }}</td>
+                                <td>{{ seafarer.family_members }}</td>
+                                <td>{{ seafarer.avg_family_m_income }}</td>
                                 {% for group in user.groups.all %}
                                   {% if group.name == 'admin' or group.name == 'manager' or group.name == 'vessel' %}
                                 <td class="text-center">

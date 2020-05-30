@@ -1,5 +1,7 @@
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.conf import settings
+import datetime
 
 # Create your models here.
 from django.db.models import SET_NULL
@@ -46,6 +48,7 @@ class Association(models.Model):
     position_2 = models.CharField('Position-2', max_length=200, null=True, blank=True)
     contact_number_2 = models.CharField('Contact No-2', unique=True, max_length=200, null=True, blank=True)
     association_email = models.EmailField('Email', max_length=200, null=True, blank=True)
+    association_website = models.URLField('Website', max_length=200, null=True, blank=True)
     added_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE, null=True, blank=True, related_name='+'
@@ -71,8 +74,8 @@ class Companie(models.Model):
     manager_name = models.CharField('Manager Name', max_length=200, null=True, blank=True)
     manager_contact = models.CharField('Manager Contact', unique=True, max_length=200, null=True, blank=True)
     company_address = models.CharField('Address', max_length=200, null=True, blank=True)
-    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True, blank=True)
-    thana = models.ForeignKey(Thana, on_delete=models.SET_NULL, null=True, blank=True)
+    district = models.ForeignKey(District, on_delete=models.CASCADE, default=65, null=True, blank=True)
+    thana = models.ForeignKey(Thana, on_delete=models.CASCADE, default=1257, null=True, blank=True)
     company_email = models.EmailField('Email', max_length=200, null=True, blank=True)
     charter_company = models.CharField('Charter Company', max_length=200, null=True, blank=True)
     cc_contact_person = models.CharField('CC Contact Person', max_length=200, null=True, blank=True)
@@ -136,6 +139,8 @@ class Vessel(models.Model):
     ship_capacity = models.CharField('Ship Capacity', max_length=200, null=True, blank=True)
     goods_type = models.ForeignKey(GoodsType, on_delete=models.SET_NULL, blank=True, null=True)
     max_draft = models.CharField('Max Draft (Feet)', max_length=200, null=True, blank=True)
+    ship_length = models.IntegerField('Ship Length (Meter)', null=True, blank=True)
+    year_built = models.IntegerField('Built Year', null=True, blank=True)
     route_name = models.CharField('Route Name', max_length=200, null=True, blank=True)
     added_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -203,6 +208,23 @@ class MobileMoneyAccount(models.Model):
         return self.account
 
 
+class StaffClass(models.Model):
+    staff_class = models.CharField('Class', unique=True, max_length=200)
+    added_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE, null=True, blank=True, related_name='+'
+    )
+    added_date = models.DateTimeField('Added Date', auto_now_add=True, null=True, blank=True)
+    updated_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE, null=True, blank=True, related_name='+'
+    )
+    updated_date = models.DateTimeField('Updated Date', auto_now_add=False, null=True, blank=True)
+
+    def __str__(self):
+        return self.staff_class
+
+
 class ShippingStaff(models.Model):
     APOSITIVE = 'A+'
     ANEGATIVE = 'A-'
@@ -233,22 +255,22 @@ class ShippingStaff(models.Model):
     company = models.ForeignKey(Companie, on_delete=models.CASCADE)
     vessel = models.ForeignKey(Vessel, on_delete=models.CASCADE)
     full_name = models.CharField('Full Name', max_length=200)
-    position = models.ForeignKey(Position, on_delete=models.CASCADE)
     contact_number = models.CharField('Contact Number', unique=True, max_length=200, null=True, blank=True)
+    position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
+    staff_class = models.ForeignKey(StaffClass, on_delete=models.CASCADE, null=True, blank=True)
+    joining_year = models.IntegerField('Joining Year', null=True, blank=True)
     home_address = models.CharField('Address', max_length=200, null=True, blank=True)
-    district = models.ForeignKey(District, on_delete=models.CASCADE, null=True, blank=True)
-    thana = models.ForeignKey(Thana, on_delete=models.CASCADE, null=True, blank=True)
-    family_members = models.CharField('Family Members', max_length=200, null=True, blank=True)
+    district = models.ForeignKey(District, on_delete=models.CASCADE)
+    thana = models.ForeignKey(Thana, on_delete=models.CASCADE)
     monthly_salary = models.IntegerField('Monthly Salary', null=True, blank=True)
-    avg_family_m_income = models.IntegerField('AVG Family Income/Month', null=True, blank=True)
     birth_date = models.DateField('Date of Birth', null=True, blank=True)
-    nid_number = models.CharField('NID Number', unique=True, null=True, max_length=200, blank=True)
     education_level = models.ForeignKey(EducationLevel, on_delete=models.CASCADE, null=True, blank=True)
-    professional_certificate = models.CharField('Professional Certificate', max_length=200, null=True, blank=True)
+    family_members = models.CharField('Family Members', max_length=200, null=True, blank=True)
+    avg_family_m_income = models.IntegerField('AVG Family Income/Month', null=True, blank=True)
     mobile_type = models.CharField('Mobile Type', max_length=200, choices=MOBILE_TYPE_CHOICES, null=True, blank=True)
-    bank_account = models.BooleanField('Bank Account', null=True, blank=True)
     mobile_money_account = models.ForeignKey(MobileMoneyAccount, on_delete=models.CASCADE, null=True, blank=True)
     blood_group = models.CharField('Blood Group', max_length=200, choices=BLOOD_GROUP_CHOICES, null=True, blank=True)
+    nid_number = models.CharField('NID Number', unique=True, null=True, max_length=200, blank=True)
     affiliated_association = models.ManyToManyField(Association,
                                                     limit_choices_to={'association_type': "Labor's Association"},
                                                     null=True, blank=True)
@@ -341,8 +363,8 @@ class GhatLabor(models.Model):
     labor_position = models.CharField('Labor Position', max_length=200, choices=GHAT_LABOR_POSITION)
     labor_contact = models.CharField('Labor Contact', unique=True, max_length=200, null=True, blank=True)
     labor_address = models.CharField('Address', max_length=200, null=True, blank=True)
-    address_district = models.ForeignKey(District, on_delete=models.CASCADE, null=True, blank=True, related_name='+')
-    address_thana = models.ForeignKey(Thana, on_delete=models.CASCADE, null=True, blank=True, related_name='+')
+    address_district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='+')
+    address_thana = models.ForeignKey(Thana, on_delete=models.CASCADE, related_name='+')
     family_members = models.CharField('Family Members', max_length=200, null=True, blank=True)
     avg_daily_income = models.IntegerField('AVG Daily Income', null=True, blank=True)
     avg_working_day_m = models.IntegerField('AVG Working Day/Month', null=True, blank=True)
@@ -367,3 +389,37 @@ class GhatLabor(models.Model):
 
     def __str__(self):
         return self.labor_name
+
+
+class StakeholderSector(models.Model):
+    sector_name = models.CharField('Sector', max_length=200)
+
+    def __str__(self):
+        return self.sector_name
+
+
+class ExternalStakeholder(models.Model):
+    full_name = models.CharField('Full Name', max_length=200)
+    org_name = models.CharField('Organization', max_length=200, null=True, blank=True)
+    department = models.CharField('Department', max_length=200, null=True, blank=True)
+    position = models.CharField('Position', max_length=200, null=True, blank=True)
+    sector = models.ForeignKey(StakeholderSector, on_delete=models.CASCADE, null=True, blank=True, related_name='+')
+    contact_1 = models.CharField('Contact No 1', unique=True, max_length=200, null=True, blank=True)
+    contact_2 = models.CharField('Contact No 2', unique=True, max_length=200, null=True, blank=True)
+    email = models.EmailField('Email', max_length=200, null=True, blank=True)
+    address = models.CharField('Address', max_length=200, null=True, blank=True)
+    note = models.CharField('Note', max_length=200, null=True, blank=True)
+    social_url = models.CharField('Social URL', max_length=200, null=True, blank=True)
+    added_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE, null=True, blank=True, related_name='+'
+    )
+    added_date = models.DateTimeField('Added Date', auto_now_add=True, null=True, blank=True)
+    updated_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE, null=True, blank=True, related_name='+'
+    )
+    updated_date = models.DateTimeField('Updated On', auto_now_add=False, null=True, blank=True)
+
+    def __str__(self):
+        return self.full_name

@@ -1,6 +1,6 @@
 from django import template
 import calendar
-import datetime
+from datetime import datetime
 
 register = template.Library()
 
@@ -26,7 +26,10 @@ def month_name(month_number):
 
 @register.filter(name='age')
 def age(bday, d=None):
+    bday = datetime.strptime(bday, '%Y-%m-%d')
     if d is None:
         d = datetime.date.today()
     return (d.year - bday.year) - int((d.month, d.day) < (bday.month, bday.day))
 
+
+register.filter('age', age)

@@ -50,4 +50,10 @@ urlpatterns = [
     path('read_labor/<str:pk>/', views.readGhatLabor, name="read_labor"),
     path('update_labor/<str:pk>/', views.updateGhatLabor, name="update_labor"),
     path('delete_labor/<str:pk>/', views.deleteGhatLabor, name="delete_labor"),
+
+    path('stakeholders/', views.stakeholders, name="stakeholders"),
+    path('create_stakeholder/', views.create_stakeholder, name="create_stakeholder"),
+    path('read_stakeholder/<str:pk>/', views.read_stakeholder, name="read_stakeholder"),
+    path('update_stakeholder/<str:pk>/', views.update_stakeholder, name="update_stakeholder"),
+    path('delete_stakeholder/<str:pk>/', views.delete_stakeholder, name="delete_stakeholder"),
 ]
