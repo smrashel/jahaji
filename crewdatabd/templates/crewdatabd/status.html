@@ -11,13 +11,13 @@
               <h5 class="card-title">{{association.acount}} Associations</h5>
               {% for labors_association in labors_associations%}
               <h5 class="card-title">
-                  Labors {{labors_association.member}} {{labors_association.zone|title}}
+                  {{labors_association.member}} {{labors_association.zone|title}} Labor's Association Having Members
               </h5>
               {% endfor %}
 
               {% for owners_association in owners_associations%}
               <h5 class="card-title">
-                  Owners {{owners_association.member}} {{owners_association.zone|title}}
+                  {{owners_association.member}} {{owners_association.zone|title}} Owner's Association Having Members
               </h5>
               {% endfor %}
 
