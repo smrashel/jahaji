@@ -14,12 +14,12 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        {{seafarer.full_name}}
+                                        {{labor.labor_name}}
                                     </h5>
                                     <h6>
-                                        {{seafarer.position}}
+                                        {{labor.labor_position}}
                                     </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+<!--                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>-->
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -37,12 +37,12 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
-                            <p>SHIP</p>
-                            <span>{{seafarer.ship}}</span><br/>
-                            <p>Email</p>
-                            <span>{{seafarer.email_address}}</span>
-                            <p>Education</p>
-                            <span>{{seafarer.educational_qualification}}</span><br/>
+                            <p>GHAT</p>
+                            <span>{{labor.ghat_name}}</span><br/>
+                            <p>Thana</p>
+                            <span>{{labor.ghat_thana}}</span>
+                            <p>District</p>
+                            <span>{{labor.ghat_district}}</span><br/>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -53,7 +53,7 @@
                                         <label>Full Name</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.full_name}}</p>
+                                        <p>{{labor.labor_name}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -61,7 +61,7 @@
                                         <label>Phone</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.phone_number}}</p>
+                                        <p>{{labor.labor_contact}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -69,15 +69,15 @@
                                         <label>Position</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.position}}</p>
+                                        <p>{{labor.labor_position}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Salary</label>
+                                        <label>Avg Daily Income</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.salary}}</p>
+                                        <p>{{labor.avg_daily_income}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -85,7 +85,7 @@
                                         <label>NID</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.nid_number}}</p>
+                                        <p>{{labor.nid_number}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -93,7 +93,7 @@
                                         <label>Date of Birth</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.birth_date}}</p>
+                                        <p>{{labor.birth_date}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -101,17 +101,17 @@
                                         <label>Home Address</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.home_address}}</p>
+                                        <p>{{labor.labor_address}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Marital Status</label>
+                                        <label>Education Level</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.marital_status}}</p>
+                                        <p>{{labor.education_level}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -119,7 +119,7 @@
                                         <label>Family Members</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.family_members}}</p>
+                                        <p>{{labor.family_members}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -127,15 +127,31 @@
                                         <label>Blood Group</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.blood_group}}</p>
+                                        <p>{{labor.blood_group}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Insurance Number</label>
+                                        <label>Avg Family Income</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.insurance_number}}</p>
+                                        <p>{{labor.avg_family_income_m}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Mobile Money Account</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{labor.mobile_money_account}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Mobile Type</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{labor.mobile_type}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -143,13 +159,7 @@
                                         <label>Added Date</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.added_date}}</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Bio</label><br/>
-                                        <p>Detail description</p>
+                                        <p>{{labor.added_date}}</p>
                                     </div>
                                 </div>
                             </div>

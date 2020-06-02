@@ -77,11 +77,7 @@ class Companie(models.Model):
     district = models.ForeignKey(District, on_delete=models.CASCADE, default=65, null=True, blank=True)
     thana = models.ForeignKey(Thana, on_delete=models.CASCADE, default=1257, null=True, blank=True)
     company_email = models.EmailField('Email', max_length=200, null=True, blank=True)
-    charter_company = models.CharField('Charter Company', max_length=200, null=True, blank=True)
-    cc_contact_person = models.CharField('CC Contact Person', max_length=200, null=True, blank=True)
-    cc_contact_no = models.CharField('CC Contact No', max_length=200, null=True, blank=True)
-    cc_address = models.CharField('CC Address', max_length=200, null=True, blank=True)
-    cc_email = models.EmailField('CC Email', max_length=200, null=True, blank=True)
+    company_website = models.URLField('Website', max_length=200, null=True, blank=True)
     added_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE, null=True, blank=True, related_name='+'

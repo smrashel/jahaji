@@ -47,11 +47,7 @@ class CompanieForm(ModelForm):
             'district': forms.Select(attrs={'class': 'form-control'}),
             'thana': forms.Select(attrs={'class': 'form-control'}),
             'company_email': forms.TextInput(attrs={'class': 'form-control'}),
-            'charter_company': forms.TextInput(attrs={'class': 'form-control'}),
-            'cc_contact_person': forms.TextInput(attrs={'class': 'form-control'}),
-            'cc_contact_no': forms.TextInput(attrs={'class': 'form-control'}),
-            'cc_address': forms.TextInput(attrs={'class': 'form-control'}),
-            'cc_email': forms.TextInput(attrs={'class': 'form-control'}),
+            'company_website': forms.TextInput(attrs={'class': 'form-control'}),
         }
         exclude = ['added_by', 'updated_by', 'updated_date']
 

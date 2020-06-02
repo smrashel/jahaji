@@ -19,7 +19,7 @@
                                     <h6>
                                         {{stakeholder.position}}
                                     </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+<!--                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>-->
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -37,12 +37,12 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
-                            <p>SHIP</p>
-                            <span>{{seafarer.ship}}</span><br/>
+                            <p>ORG</p>
+                            <span>{{stakeholder.org_name}}</span><br/>
                             <p>Email</p>
-                            <span>{{seafarer.email_address}}</span>
-                            <p>Education</p>
-                            <span>{{seafarer.educational_qualification}}</span><br/>
+                            <span>{{stakeholder.email}}</span>
+                            <p>Social</p>
+                            <span>{{stakeholder.social_url}}</span><br/>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -53,15 +53,23 @@
                                         <label>Full Name</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.full_name}}</p>
+                                        <p>{{stakeholder.full_name}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Phone</label>
+                                        <label>Contact 1</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.phone_number}}</p>
+                                        <p>{{stakeholder.contact_1}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Contact 2</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{stakeholder.contact_2}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -69,73 +77,41 @@
                                         <label>Position</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.position}}</p>
+                                        <p>{{stakeholder.position}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Salary</label>
+                                        <label>Sector</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.salary}}</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>NID</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>{{seafarer.nid_number}}</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Date of Birth</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>{{seafarer.birth_date}}</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Home Address</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>{{seafarer.home_address}}</p>
+                                        <p>{{stakeholder.sector}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Marital Status</label>
+                                        <label>Address</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.marital_status}}</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Family Members</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>{{seafarer.family_members}}</p>
+                                        <p>{{stakeholder.address}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Blood Group</label>
+                                        <label>Note</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.blood_group}}</p>
+                                        <p>{{stakeholder.note}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Insurance Number</label>
+                                        <label>Department</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.insurance_number}}</p>
+                                        <p>{{stakeholder.department}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -143,13 +119,7 @@
                                         <label>Added Date</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>{{seafarer.added_date}}</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Bio</label><br/>
-                                        <p>Detail description</p>
+                                        <p>{{stakeholder.added_date}}</p>
                                     </div>
                                 </div>
                             </div>

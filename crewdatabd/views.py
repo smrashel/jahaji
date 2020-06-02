@@ -54,15 +54,16 @@ def home(request):
                                                      avg_family_members=Avg('family_members'),
                                                      avg_m_income=Avg('monthly_salary'),
                                                      avg_f_income=Avg('avg_family_m_income'),
-                                                     dst_position=Count('position', distinct=True))
+                                                     dst_position=Count('position', distinct=True),
+                                                     dst_class=Count('staff_class', distinct=True))
     company_count = Companie.objects.aggregate(member_count=Count('id', distinct=True),
                                                   association_count=Count('owners_association', distinct=True))
     vessel_staffs = VesselType.objects.values('vessel_type').annotate(vessel_count=Count('vessel__ship_type'),
                                                                       staff_count=Count(
                                                                           'vessel__shippingstaff__full_name'))
     association = Association.objects.aggregate(acount=Count('association_name'))
-    owners_associations = Association.objects.values('zone').annotate(member=Count('companie__company_name'))
-    labors_associations = Association.objects.values('zone').annotate(member=Count('shippingstaff__full_name'))
+    owners_associations = Association.objects.values('zone').annotate(member=Count('companie__owners_association', distinct=True))
+    labors_associations = Association.objects.values('zone').annotate(member=Count('shippingstaff__affiliated_association', distinct=True))
     ghat = Ghat.objects.aggregate(ghat_count=Count('ghat_name'), district_count=Count('district', distinct=True))
     ghat_labor = GhatLabor.objects.aggregate(labor_count=Count('labor_name'), avg_family_members=Avg('family_members'), avg_d_income=Avg('avg_daily_income'), avg_f_income=Avg('avg_family_income_m'))
     with connection.cursor() as cursor:
@@ -72,10 +73,13 @@ def home(request):
         cursor.execute("SELECT COUNT(DISTINCT(association_id)) AS association, COUNT(DISTINCT(companie_id)) AS company FROM crewdatabd_companie_owners_association")
         ass_company = cursor.fetchone()
 
+        cursor.execute("SELECT COUNT(DISTINCT(association_id)) AS association, COUNT(DISTINCT(shippingstaff_id)) AS staff FROM crewdatabd_shippingstaff_affiliated_association")
+        ass_staff = cursor.fetchone()
+
     context = {'company_count': company_count, 'ship_count': ship_count,
                'association': association, 'ghat': ghat, 'ghat_labor': ghat_labor, 'staff_count': staff_count,
                'shipping_staff': shipping_staff, 'vessel_staffs': vessel_staffs, 'owners_associations': owners_associations,
-               'labors_associations': labors_associations, 'age': age, 'ass_company': ass_company}
+               'labors_associations': labors_associations, 'age': age, 'ass_company': ass_company, 'ass_staff': ass_staff}
     return render(request, 'crewdatabd/dashboard.html', context)
 
 
