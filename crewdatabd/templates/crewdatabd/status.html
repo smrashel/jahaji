@@ -11,13 +11,13 @@
               <h5 class="card-title">{{association.acount}} Associations</h5>
               {% for labors_association in labors_associations%}
               <h5 class="card-title">
-                  {{labors_association.member}} {{labors_association.zone|title}} Labor's Association Having Members
+                  {{labors_association.member}} {{labors_association.zone|title}} Labor Association Having Members
               </h5>
               {% endfor %}
 
               {% for owners_association in owners_associations%}
               <h5 class="card-title">
-                  {{owners_association.member}} {{owners_association.zone|title}} Owner's Association Having Members
+                  {{owners_association.member}} {{owners_association.zone|title}} Owner Association Having Members
               </h5>
               {% endfor %}
 
@@ -52,7 +52,7 @@
           <div class="card-body text-center bg-info">
               <h5 class="card-title">{{shipping_staff.dst_position}} Different Positions</h5>
               <h5 class="card-title">{{shipping_staff.dst_class}} Different Class</h5>
-              <h5 class="card-title">{{shipping_staff.avg_family_members}} AVG Family Members</h5>
+              <h5 class="card-title">{{shipping_staff.avg_family_members|floatformat}} AVG Family Members</h5>
               <h5 class="card-title">{{shipping_staff.avg_m_income|floatformat}} Taka AVG Monthly Income</h5>
               <h5 class="card-title">{{shipping_staff.avg_f_income|floatformat}} Taka AVG Family Income</h5>
               <h5 class="card-title">{{age.0}} Years AVG Age</h5>
