@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'crewdatabd.apps.CrewdatabdConfig',
     'import_export',
     'crispy_forms',
+    'django_filters',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

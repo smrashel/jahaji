@@ -1,5 +1,7 @@
 {% extends 'crewdatabd/main.html' %}
 
+{% load widget_tweaks %}
+
 {% block content %}
 
         <div class="card text-black mb-3">
@@ -18,6 +20,25 @@
                       {{ message }}
                     </div>
                 {% endfor %}
+            <form method="get" autocomplete="off">
+              <br>
+              <div class="form-row">
+                <div class="form-group col-md-4 mb-0">
+                    {{ myFilter.form.full_name.label_tag }}
+                    {% render_field myFilter.form.full_name class="form-control" %}
+                </div>
+                <div class="form-group col-md-4 mb-0">
+                    {{ myFilter.form.contact_number.label_tag }}
+                    {% render_field myFilter.form.contact_number class="form-control" %}
+                </div>
+                <div class="form-group col-md-4 mb-0">
+                    <button type="submit" class="btn btn-primary float-right">
+                      <span class="fas fa-search"></span> Search
+                    </button>
+                </div>
+              </div>
+            </form>
+            <br>
                 <div align="center" style="overflow:auto">
                     <table id="ship" class="table table-striped table-hover">
                         <thead>

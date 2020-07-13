@@ -18,6 +18,7 @@ import datetime
 from .models import *
 from .forms import *
 from .decorators import *
+from .filters import *
 from crewdatabd.templatetags import custom_time
 
 
@@ -58,9 +59,9 @@ def home(request):
                                                      dst_class=Count('staff_class', distinct=True))
     company_count = Companie.objects.aggregate(member_count=Count('id', distinct=True),
                                                   association_count=Count('owners_association', distinct=True))
-    vessel_staffs = VesselType.objects.values('vessel_type').annotate(vessel_count=Count('vessel__ship_type'),
-                                                                      staff_count=Count(
-                                                                          'vessel__shippingstaff__full_name'))
+    # vessel_staffs = VesselType.objects.values('vessel_type').annotate(vessel_count=Count('vessel__ship_type'),
+    #                                                                 staff_count=Count(
+    #                                                                     'vessel__shippingstaff__full_name'))
     association = Association.objects.aggregate(acount=Count('association_name'))
     owners_associations = Association.objects.values('zone').annotate(member=Count('companie__owners_association', distinct=True))
     labors_associations = Association.objects.values('zone').annotate(member=Count('shippingstaff__affiliated_association', distinct=True))
@@ -75,6 +76,17 @@ def home(request):
 
         cursor.execute("SELECT COUNT(DISTINCT(association_id)) AS association, COUNT(DISTINCT(shippingstaff_id)) AS staff FROM crewdatabd_shippingstaff_affiliated_association")
         ass_staff = cursor.fetchone()
+        cursor.execute("""SELECT q1.vessel_type, q1.vessel_count, q2.staff_count
+                        FROM
+                        (SELECT crewdatabd_vesseltype.id, crewdatabd_vesseltype.vessel_type, COUNT(crewdatabd_vessel.id) AS vessel_count FROM crewdatabd_vesseltype
+                            LEFT JOIN crewdatabd_vessel ON crewdatabd_vesseltype.id = crewdatabd_vessel.ship_type_id
+                            GROUP BY crewdatabd_vesseltype.id, crewdatabd_vesseltype.vessel_type) q1
+                        LEFT JOIN
+                            (SELECT crewdatabd_vessel.ship_type_id, COUNT(crewdatabd_shippingstaff.id) AS staff_count  FROM django_jahaji.crewdatabd_vessel
+                            LEFT JOIN crewdatabd_shippingstaff ON  crewdatabd_vessel.id=crewdatabd_shippingstaff.vessel_id
+                            GROUP BY crewdatabd_vessel.ship_type_id)q2
+                        ON q1.id=q2.ship_type_id""")
+        vessel_staffs = cursor.fetchall()
 
     context = {'company_count': company_count, 'ship_count': ship_count,
                'association': association, 'ghat': ghat, 'ghat_labor': ghat_labor, 'staff_count': staff_count,
@@ -354,7 +366,11 @@ def deleteShip(request, pk):
 @allowed_users(allowed_roles=['admin', 'manager', 'vessel', 'viewer'])
 def seafarers(request):
     seafarers = ShippingStaff.objects.all()
-    context = {'seafarers': seafarers}
+
+    myFilter = ShippingStaffFilter(request.GET, queryset=seafarers)
+    seafarers = myFilter.qs
+
+    context = {'seafarers': seafarers, 'myFilter': myFilter}
     return render(request, 'crewdatabd/seafarers.html', context)
 
 
